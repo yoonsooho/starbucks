@@ -101,7 +101,6 @@ function random(min, max) {
   // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
   return parseFloat((Math.random() * (max - min) + min).toFixed(2))
 }
-
 function floatingobject(selector,delay,size){
  // gsap.to(요소, 지속시간, 옵션);
  gsap.to(
