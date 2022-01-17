@@ -1,22 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener("click",function(){
-  // Logic...
-  searchInputEl.focus();
-});
-
-
-searchInputEl.addEventListener('focus', function(){
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder','통합검색');
-});
-
-searchInputEl.addEventListener('blur', function(){
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder','');
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl=document.querySelector('#to-top');
 
@@ -120,7 +101,6 @@ function random(min, max) {
   // `parseFloat()`을 통해 소수점을 가지는 숫자 데이터로 변환
   return parseFloat((Math.random() * (max - min) + min).toFixed(2))
 }
-
 function floatingobject(selector,delay,size){
  // gsap.to(요소, 지속시간, 옵션);
  gsap.to(
@@ -149,10 +129,6 @@ spyEls.forEach(function(spyEl){
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
-
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear(); // 2021
 
 
 
